@@ -25,11 +25,11 @@ setInterval(function() {
     http.get("https://frozen-citadel-56582.herokuapp.com/");
 }, 300000); // every 5 minutes (300000)
 
-// Passport set up
-app.use(cookieSession({
-  maxAge: 1800000,
-  keys: [keys.session.cookieKey]
-}));
+// // Passport set up
+// app.use(cookieSession({
+//   maxAge: 1800000,
+//   keys: [keys.session.cookieKey]
+// }));
 
 
 app.use(passport.initialize());
