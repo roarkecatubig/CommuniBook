@@ -22,7 +22,7 @@ var PORT = process.env.PORT || 8000;
 // Keeps app awake on Heroku
 var http = require("http");
 setInterval(function() {
-    http.get("http://stormy-fjord-21749.herokuapp.com/");
+    http.get("https://frozen-citadel-56582.herokuapp.com/");
 }, 300000); // every 5 minutes (300000)
 
 // Passport set up
