@@ -8,7 +8,7 @@ require('dotenv').config();
 var express = require("express");
 // var session = require('express-session');
 var bodyParser = require("body-parser");
-// var cookieSession = require('cookie-session');
+var cookieSession = require('cookie-session');
 var passportSetup = require('./config/passport-setup');
 var passport = require('passport');
 var keys = require('./config/keys.js');
@@ -25,11 +25,11 @@ setInterval(function() {
     http.get("http://frozen-citadel-56582.herokuapp.com/");
 }, 300000); // every 5 minutes (300000)
 
-// // Passport set up
-// app.use(cookieSession({
-//   maxAge: 1800000,
-//   keys: [keys.session.cookieKey]
-// }));
+// Passport set up
+app.use(cookieSession({
+  maxAge: 1800000,
+  keys: [keys.session.cookieKey]
+}));
 
 
 app.use(passport.initialize());
