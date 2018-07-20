@@ -6,7 +6,7 @@
 // =============================================================
 require('dotenv').config();
 var express = require("express");
-// var session = require('express-session');
+var session = require('express-session');
 var bodyParser = require("body-parser");
 var cookieSession = require('cookie-session');
 var passportSetup = require('./config/passport-setup');
